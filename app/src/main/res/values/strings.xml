@@ -3,4 +3,6 @@
     <string name="it_s_random_number">It\'s random number from 0 to %1d</string>
     <string name="click_to_zero">Click to make zero</string>
     <string name="tap_to_back_on_home_screen">Tap to back on home screen</string>
+    <string name="create_random_start">Tap to create random start number</string>
+    <string name="count">Count</string>
 </resources>
