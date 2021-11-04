@@ -5,11 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        val STR_FROM_SEC = "STR_FROM_SEC"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        startedValue()
+    }
+    fun startedValue(){
+        val count:Int = intent.getIntExtra(STR_FROM_SEC, 0)
+        val temp:TextView = findViewById(R.id.textView)
+        temp.text = count.toString()
     }
 
     fun counter(view: View) {
@@ -35,4 +45,6 @@ class MainActivity : AppCompatActivity() {
         randomIntent.putExtra(MainActivity2.TOTAL_COUNT, count)
         startActivity(randomIntent)
     }
+
+
 }
