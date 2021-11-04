@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lesson_2_1</string>
+    <string name="it_s_random_number">It\'s random number from 0 to %1d</string>
+    <string name="click_to_zero">Click to make zero</string>
+</resources>
