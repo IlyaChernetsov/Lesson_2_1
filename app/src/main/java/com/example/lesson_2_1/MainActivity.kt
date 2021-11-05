@@ -6,15 +6,48 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.PackageManagerCompat.LOG_TAG
+
+import android.util.Log
+import androidx.core.content.PackageManagerCompat
+
 
 class MainActivity : AppCompatActivity() {
     companion object {
         val STR_FROM_SEC = "STR_FROM_SEC"
+        private val LOG_TAG: String = MainActivity::class.java.simpleName
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         startedValue()
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onCreate");
+
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.d(LOG_TAG, "onStart")
+    }
+    override fun onPause() {
+        super.onPause()
+        Log.d(LOG_TAG, "onPause")
+    }
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(LOG_TAG, "onRestart")
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.d(LOG_TAG, "onResume")
+    }
+    override fun onStop() {
+        super.onStop()
+        Log.d(LOG_TAG, "onStop")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(LOG_TAG, "onDestroy")
     }
     fun startedValue(){
         val count:Int = intent.getIntExtra(STR_FROM_SEC, 0)
